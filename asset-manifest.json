@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CinemaWeb/static/css/main.eb6be6f2.css",
+    "main.js": "/CinemaWeb/static/js/main.a2055895.js",
+    "index.html": "/CinemaWeb/index.html",
+    "main.eb6be6f2.css.map": "/CinemaWeb/static/css/main.eb6be6f2.css.map",
+    "main.a2055895.js.map": "/CinemaWeb/static/js/main.a2055895.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb6be6f2.css",
+    "static/js/main.a2055895.js"
+  ]
+}
