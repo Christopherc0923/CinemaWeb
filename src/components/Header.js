@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <header className="">
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen flex flex-wrap items-center justify-evenly mx-auto p-4">
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -144,7 +144,7 @@ export default function Header() {
           <div
             className={`${
               hidden ? "hidden" : ""
-            } items-center justify-between w-full md:flex md:w-auto md:order-1`}
+            } items-center justify-between w-full md:flex md:w-auto md:order-1 p-6 xl:p-3`}
             id="navbar-search"
           >
             <div className="relative mt-3 md:hidden">
@@ -195,7 +195,7 @@ export default function Header() {
                     isActive ? activeClass : inactiveClass
                   }
                 >
-                  Popular
+                  Popular Movie
                 </NavLink>
               </li>
               <li>
@@ -205,7 +205,7 @@ export default function Header() {
                     isActive ? activeClass : inactiveClass
                   }
                 >
-                  Upcoming
+                  Upcoming Movie
                 </NavLink>
               </li>
               <li>
@@ -215,7 +215,37 @@ export default function Header() {
                     isActive ? activeClass : inactiveClass
                   }
                 >
-                  Top
+                  Top Movie
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/tv/upcoming"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inactiveClass
+                  }
+                >
+                  Upcoming Shows
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/tv/popular"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inactiveClass
+                  }
+                >
+                  Popular Shows
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/tv/top"
+                  className={({ isActive }) =>
+                    isActive ? activeClass : inactiveClass
+                  }
+                >
+                  Top Shows
                 </NavLink>
               </li>
             </ul>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import { useFetch } from "../hook/useFetch";
 
-function MovieList({ path }) {
+function TVList({ path }) {
   const { data: movies } = useFetch(path);
 
   return (
@@ -19,4 +19,4 @@ function MovieList({ path }) {
   );
 }
 
-export default MovieList;
+export default TVList;

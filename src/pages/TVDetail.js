@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-function MovieDetail() {
+function TVDetail() {
   const params = useParams();
   const [data, setData] = useState({});
-  const url = `https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.REACT_APP_API_KEY}`;
+  const url = `https://api.themoviedb.org/3/tv/${params.id}?api_key=${process.env.REACT_APP_API_KEY}`;
 
   useEffect(() => {
     async function fetchMovieDetail() {
@@ -36,8 +36,8 @@ function MovieDetail() {
         </div>
 
         <div className="max-w-2xl mx-10">
-          <h1 className="text-5xl m-3 text-font">{data.original_title}</h1>
-          <p className="text-2xl m-3">Release Date: {data.release_date}</p>
+          <h1 className="text-5xl m-3 text-font">{data.original_name}</h1>
+          <p className="text-2xl m-3">Release Date: {data.first_air_date}</p>
 
           <p className="text-justify">{data.overview}</p>
 
@@ -45,7 +45,8 @@ function MovieDetail() {
             <span className={textColorClass}>{data.vote_average}</span> |{" "}
             {data.vote_count} Reviews
           </p>
-
+          <p className="">Seasons: {data.number_of_seasons}</p>
+          <p className="">Ep: {data.number_of_episodes}</p>
           <ul className="flex justify-start">
             {data?.genres?.map((genre) => (
               <li
@@ -56,18 +57,10 @@ function MovieDetail() {
               </li>
             ))}
           </ul>
-
-          <a
-            className="text-red-300"
-            href={`https://www.imdb.com/title/${data.imdb_id}`}
-            target="_blank"
-          >
-            IMDB
-          </a>
         </div>
       </div>
     </main>
   );
 }
 
-export default MovieDetail;
+export default TVDetail;
